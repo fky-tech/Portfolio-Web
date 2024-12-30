@@ -318,6 +318,11 @@ a {
     position: relative;
     padding-top: 7rem;
 }
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
 .proj {
     display: flex;
     align-items: center;
@@ -329,12 +334,16 @@ a {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border: 1px solid #1f2937;
 }
 .proj-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 30px;
+    /* padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px; */
+    padding: 30px 50px;
 }
 .proj-form > h1 {
     text-wrap: nowrap;
@@ -353,6 +362,7 @@ a {
     display:block;
 }
 .proj > form > button {
+    margin-bottom: 1.5rem;
     padding: .8rem 3rem;
     background-color: #009879;
     border-radius: 10px;

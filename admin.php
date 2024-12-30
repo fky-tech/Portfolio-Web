@@ -27,6 +27,47 @@ if (isset($_POST['add'])) {
     }
 }
 
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $title = $_POST['title'];
+    $desc = $_POST['description'];
+    $image = $_POST['image'];
+    $link = $_POST['link'];
+
+    $project = new Projects();
+    $result = $project->update($id, $title, $desc, $image, $link);
+
+    if ($result == "Success") {
+      ?>
+      <script>
+        alert("Updated Successfully");
+      </script>
+      <?php
+    } else {
+      $error = $result;
+      echo $error;
+    }
+}
+
+if (isset($_POST['delete'])) {
+
+    $id = $_POST['id'];
+
+    $project = new Projects();
+    $result = $project->delete($id);
+
+    if ($result == "Success") {
+      ?>
+      <script>
+        alert("Deleted Successfully");
+      </script>
+      <?php
+    } else {
+      $error = $result;
+      echo $error;
+    }
+}
+
 $contact = new Contacts();
 $result = $contact->getContacts();
 
@@ -64,7 +105,7 @@ $result = $contact->getContacts();
             </form>
         </div>
         <div class="display" style="display: none;">
-            <div>
+            <div class="project-wrapper">
                 <div class="proj">
                     <form method="post">
                         <div class="proj-form">
@@ -87,6 +128,46 @@ $result = $contact->getContacts();
                             </div>
                         </div>
                         <button type="submit" name="add">Add</button>
+                    </form>
+                </div>
+                <div class="proj">
+                    <form method="post">
+                        <div class="proj-form">
+                            <h1>Modify Project</h1>
+                            <div>
+                                <label for="id">ID</label>
+                                <input type="text" id="id" name="id" placeholder="ID" required>
+                            </div>
+                            <div>
+                                <label for="title">Title</label>
+                                <input type="text" id="title" name="title" placeholder="Add title" required>
+                            </div>
+                            <div>
+                                <label for="description">Description</label>
+                                <textarea name="description" id="description" rows="10" placeholder="Add description"></textarea>
+                            </div>
+                            <div>
+                                <label for="image">Image</label>
+                                <input type="text" id="image" name="image" placeholder="Add image">
+                            </div>
+                            <div>
+                                <label for="link">Link</label>
+                                <input type="text" id="link" name="link" placeholder="Add link">
+                            </div>
+                        </div>
+                        <button type="submit" name="update">Update</button>
+                    </form>
+                </div>
+                <div class="proj">
+                    <form method="post">
+                        <div class="proj-form">
+                            <h1>Delete Project</h1>
+                            <div>
+                                <label for="id">ID</label>
+                                <input type="text" id="id" name="id" placeholder="ID" required>
+                            </div>
+                        </div>
+                        <button type="submit" name="delete">Delete</button>
                     </form>
                 </div>
             </div>
