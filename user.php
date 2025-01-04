@@ -29,7 +29,7 @@ class User extends DB {
         $stmt->close();
         $this->closeConnection();
         return false;
-    } 
+    }
 }
 
 ?>

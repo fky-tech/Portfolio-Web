@@ -79,13 +79,13 @@ $result = $contact->getContacts();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="http://localhost/portfolio-web/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header">
             <div class="logo">
-                <img src="http://localhost/portfolio-web/images/logo.png" alt="" width="70px" height="60px">
+                <img src="images/logo.png" alt="" width="70px" height="60px">
             </div>
         </div>
     </header>

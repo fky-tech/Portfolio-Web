@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="http://localhost/portfolio-web/style.css">
+    <link rel="stylesheet" href="style.css">
     <script>
       const mediaQuery = window.matchMedia("(max-width: 768px)");
         const mediaQ = window.matchMedia("(min-width: 769px)");
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
   <header>
     <div class="header">
       <div class="logo">
-        <img src="http://localhost/portfolio-web/images/logo.png" alt="" width="70px" height="60px">
+        <img src="images/logo.png" alt="" width="70px" height="60px">
       </div>
       <div class="toggle-button" onclick="toggleMenu()">
           <span class="bar"></span>
@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) {
           </div>
         </div>
         <div>
-          <img src="http://localhost/portfolio-web/images/rb_3863.png" alt="" width="500px" height="350px">
+          <img src="images/rb_3863.png" alt="" width="500px" height="350px">
         </div>
       </div>
     </section>
@@ -184,22 +184,22 @@ if (isset($_POST['submit'])) {
           <ul class="contact-icons">
             <li>
               <a href="/">
-                <img src="http://localhost/portfolio-web/images/github (1).png" alt="" width="28" height="28">
+                <img src="images/github (1).png" alt="" width="28" height="28">
               </a>
             </li>
             <li>
               <a href="/">
-                <img src="http://localhost/portfolio-web/images/linkedin.png" alt="" width="28" height="28">
+                <img src="images/linkedin.png" alt="" width="28" height="28">
               </a>
             </li>
             <li>
               <a href="/">
-                <img src="http://localhost/portfolio-web/images/mail.png" alt="" width="28" height="28">
+                <img src="images/mail.png" alt="" width="28" height="28">
               </a>
             </li>
             <li>
               <a href="/">
-                <img src="http://localhost/portfolio-web/images/instagram (1).png" alt="" width="28" height="28">
+                <img src="images/instagram (1).png" alt="" width="28" height="28">
               </a>
             </li>
           </ul>
